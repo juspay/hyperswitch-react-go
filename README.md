@@ -28,7 +28,7 @@ Don't have a Hyperswitch account? [Sign up here!](https://app.hyperswitch.io/reg
 npm install
 ~~~
 
-3. Run the server:
+3. Run the server :
 
 ~~~
 npm run start-server
@@ -36,7 +36,7 @@ npm run start-server
 
 Runs the backend server in the development mode.
 
-3. Run the client:
+3. Run the client :
 
 ~~~
 npm run start-client
