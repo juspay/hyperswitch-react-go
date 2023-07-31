@@ -12,6 +12,14 @@ const HYPER_SWITCH_API_KEY = "HYPERSWITCH_API_KEY"
 const HYPER_SWITCH_API_BASE_URL = "https://sandbox.hyperswitch.io"
 
 func createPaymentHandler(w http.ResponseWriter, r *http.Request) {
+	
+	/*
+        	If you have two or more “business_country” + “business_label” pairs configured in your Hyperswitch dashboard,
+        	please pass the fields business_country and business_label in this request body.
+        	For accessing more features, you can check out the request body schema for payments-create API here :
+        	https://api-reference.hyperswitch.io/docs/hyperswitch-api-reference/60bae82472db8-payments-create
+        */
+	
 	payload := []byte(`{"amount": 100, "currency": "USD"}`)
 	client := &http.Client{}
 	req, err := http.NewRequest("POST", HYPER_SWITCH_API_BASE_URL+"/payments", bytes.NewBuffer(payload))
