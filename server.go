@@ -20,7 +20,7 @@ func createPaymentHandler(w http.ResponseWriter, r *http.Request) {
         	https://api-reference.hyperswitch.io/docs/hyperswitch-api-reference/60bae82472db8-payments-create
         */
 	
-	payload := []byte(`{"amount": 100, "currency": "USD"}`)
+	payload := []byte(`{"amount": 100, "currency": "USD", "customer_id": "hyperswitch_customer"}`)
 	client := &http.Client{}
 	req, err := http.NewRequest("POST", HYPER_SWITCH_API_BASE_URL+"/payments", bytes.NewBuffer(payload))
 	if err != nil {
